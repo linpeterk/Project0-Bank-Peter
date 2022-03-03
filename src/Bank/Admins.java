@@ -27,7 +27,7 @@ public class Admins extends Employees implements java.io.Serializable{
 					password = ((Employees) m.getValue()).getPassword();
 					access = ((Employees) m.getValue()).getaccessLevel();
 		
-					System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " + access);
+					System.out.println("Username= " + userName + " Password= "+ password + " Account Access Level= " + access);
 				}
 				
 	}

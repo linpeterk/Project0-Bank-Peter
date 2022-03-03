@@ -69,6 +69,14 @@ public class Customers implements Person, java.io.Serializable{
 	
 	public void printCustomer()
 	{
-		System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " + accountType+ " balance= " + balance);
+		String temp = "";
+		switch(accountType)
+		{
+		case 1: temp= "Checking";break;
+		case 2: temp= "Savings";break;
+		case 3: temp= "Joint";break;
+		default: temp= "Checking";
+		}
+		System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " + temp + " balance= " + balance);
 	}
 }

@@ -32,14 +32,18 @@ public class Employees implements Person, java.io.Serializable{
 		
 		for(Map.Entry m: Database.currentCustomers.entrySet())
 			{
+			((Customers) m.getValue()).printCustomer();
+			/*
 				String userName, password;
 				int accountType;
 				double balance;
 				userName = ((Customers) m.getValue()).getUserName();
 				password = ((Customers) m.getValue()).getPassword();
 				accountType = ((Customers) m.getValue()).getAccountType();
-				balance = ((Customers) m.getValue()).getBalance();				
+				balance = ((Customers) m.getValue()).getBalance();			
+				
 				System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " +accountType + " balance= " + balance);
+				*/
 			}
 	
 	}
@@ -52,6 +56,7 @@ public class Employees implements Person, java.io.Serializable{
 		}
 		for(Map.Entry m: Database.appCustomers.entrySet())
 			{
+			/*
 				String userName, password;
 				int accountType;
 				double balance;
@@ -60,6 +65,8 @@ public class Employees implements Person, java.io.Serializable{
 				accountType = ((Customers) m.getValue()).getAccountType();
 				balance = ((Customers) m.getValue()).getBalance();				
 				System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " +accountType + " balance= " + balance);
+				*/
+			((Customers) m.getValue()).printCustomer();
 			}
 	
 	}

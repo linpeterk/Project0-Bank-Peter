@@ -115,7 +115,7 @@ public class MenuCustomers {
 		Transactions dest = new Transactions(Database.findCustomers(destUserName)); //Find target customer's data
 		
 			if(dest.c == null) {
-				System.out.println("Transfer failed: Destination UserName do not exist.");
+				System.out.println("Transfer failed: Destination UserName: " + destUserName + " do not exist.");
 				return;
 			}
 		
