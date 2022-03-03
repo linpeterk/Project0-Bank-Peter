@@ -33,7 +33,7 @@ public class Menu {
 	do {
 		name = veri.enterUserName();
 		
-		if(Database.appVerify(name)&&Database.customerVerify(name)) //Check name not taken 
+		if(Database.appVerify(name)||Database.customerVerify(name)) //Check name not taken 
 		{
 			
 			System.out.println("User name is taken, try another user name");
@@ -41,7 +41,7 @@ public class Menu {
 		else {
 		//	System.out.println("name is good");
 		}
-	}while(Database.appVerify(name)); //loop until a valid and un-taken name is inputted
+	}while(Database.appVerify(name)||Database.customerVerify(name)); //loop until a valid and un-taken name is inputted
 		
 		password = veri.enterPassword();
 		accountType = menuC.pickAccountType();
@@ -114,11 +114,13 @@ public class Menu {
 			if(choice==1) //Accepts Customer
 			{
 				System.out.println("Applicant " + c.getUserName()+ " Accepted!");
-				e.acceptApplicants(name);				
+				e.acceptApplicants(name);	
+				return;
 			}
 			else if(choice ==2) { //Delete Customer
 				System.out.println("Applicant " + c.getUserName()+ " Denied!");
 				e.denyApplicants(name);
+				return;
 			}
 			else {
 				System.out.println("Denied: Invalid Number");
@@ -137,7 +139,7 @@ public class Menu {
 	 */
 	public void employeeMenu(Employees e)
 	{
-		int choice = 0;
+		int choice = 500; // pointless number
 		System.out.println();
 		System.out.println("*********** EMPLOYEE MENU *************");
 		System.out.println("Please select the following options");
@@ -151,6 +153,12 @@ public class Menu {
 		{
 			choice = scan.nextInt();
 			scan.nextLine(); //clear buffer
+		}
+		else
+		{
+			System.out.println("Not a number, ");
+			scan.nextLine();
+
 		}
 		
 		switch(choice)
@@ -206,7 +214,7 @@ public class Menu {
 	 */
 	public void adminMenu(Employees e)
 	{
-		int choice = 0;
+		int choice = 500; //pointless number
 		System.out.println();
 		System.out.println("************ ADMIN MENU ************");
 		System.out.println("Please select the following options");
@@ -224,6 +232,12 @@ public class Menu {
 			choice = scan.nextInt();
 			scan.nextLine(); //clear buffer
 		}
+		else
+		{
+			System.out.println("Not a number, ");
+			scan.nextLine();
+		}
+		
 		
 		switch(choice)
 		{
@@ -276,7 +290,7 @@ public class Menu {
 	{
 		
 		Transactions t = new Transactions(c);
-		int choice = 0;
+		int choice = 500;//pointless selection
 		System.out.println();
 		System.out.println("*********** CUSTOMER MENU ***********");
 		System.out.println("Please select the following options");
@@ -292,6 +306,12 @@ public class Menu {
 			choice = scan.nextInt();
 			scan.nextLine(); //clear buffer
 		}
+		else
+		{
+			System.out.println("Not a number, ");
+			scan.nextLine();
+		}
+		
 		
 		switch(choice)
 		{
@@ -305,7 +325,7 @@ public class Menu {
 		
 		case 0: break;
 		
-		default: System.out.println("No valid selection (withdraw/deposit/view/transfer)");
+		default: System.out.println("No valid selection"); customerOptions(c);
 		}
 	}
 	
@@ -384,6 +404,8 @@ public class Menu {
 			{
 				System.out.println("Not a valid number, please try again");
 				System.out.println();
+			
+		
 			}
 		}
 		else {
@@ -391,7 +413,7 @@ public class Menu {
 			System.out.println();
 			scan.nextLine();		
 		}
-		}while(input !=1 && input != 2);
+		}while(input !=1 && input != 2 && input != 3);
 		
 
 		return "Exceptions";

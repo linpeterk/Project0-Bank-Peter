@@ -29,7 +29,7 @@ public class MenuCustomers {
 				System.out.println("Not a valid option, please try again");
 
 			}
-			break;
+		
 		}
 		else {
 			System.out.println("Not a number, please try again");
@@ -37,7 +37,7 @@ public class MenuCustomers {
 		}
 		 //exception handling later
 		
-		}while(true);
+		}while(accountType != 1 && accountType != 2 && accountType != 3);
 		return accountType;
 	}
 	
