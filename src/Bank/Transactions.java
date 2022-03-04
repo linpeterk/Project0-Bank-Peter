@@ -18,6 +18,7 @@ public class Transactions {
 		c.setBalance(c.getBalance()+depos);
 		System.out.println(c.getUserName() + ": Deposited " + depos);
 		System.out.println(c.getUserName() + " Total balance " + c.getBalance());
+		c.tranHistory.add("1"+ depos);
 		return true;
 	}
 	
@@ -43,7 +44,8 @@ public class Transactions {
 		
 			c.setBalance(c.getBalance()-withdrawAmount);
 			System.out.println(c.getUserName() +": Withdrawn " + withdrawAmount);
-			System.out.println(c.getUserName() +" Total Balance " + c.getBalance());		
+			System.out.println(c.getUserName() +" Total Balance " + c.getBalance());
+			c.tranHistory.add("2"+ withdrawAmount);
 			return true;
 		}
 	}
@@ -63,11 +65,13 @@ public class Transactions {
 				System.out.println("Transfer failed: Destination UserName do not exist");
 				return false;
 			}
+			c.tranHistory.add("3"+ destUserName + amount);
 			dest.deposit(amount);
 			System.out.println("Status report: Original Owner"); 
 			c.printCustomer();
 			System.out.println("Status report: Target"); 
 			dest.c.printCustomer();
+			
 			
 			return true;
 		}

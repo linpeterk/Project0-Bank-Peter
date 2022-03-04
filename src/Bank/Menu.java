@@ -298,6 +298,7 @@ public class Menu {
 		System.out.println("2. Deposit");
 		System.out.println("3. View Balance");
 		System.out.println("4. Transfer");
+		System.out.println("5. View History");
 		System.out.println("0. EXIT");
 		System.out.println("*********** CUSTOMER MENU ***********");
 		
@@ -322,6 +323,8 @@ public class Menu {
 		case 3: menuC.viewBalanceMenu(t); customerOptions(c);break;
 		
 		case 4: menuC.transferMenu(t); customerOptions(c);break;
+		
+		case 5: c.printHistory(); customerOptions(c);break;
 		
 		case 0: break;
 		
@@ -366,6 +369,8 @@ public class Menu {
 							 		ONLY RETURNS OBJECT CUSTOMER IF VERIFICATION IS SUCCESSFUL;		*/
 		case "Employee":  //System.out.println("It's an employee"); 
 							employeeOptions(veri.employeeloginVer());	return 3;
+							
+		case "Exit": return 0;
 		
 		default:System.out.println("No right option selected"); return 0;
 		}
@@ -381,6 +386,7 @@ public class Menu {
 		System.out.println("1. New Customer");
 		System.out.println("2. Existing Customer");
 		System.out.println("3. Employee");
+		System.out.println("0. Exit");
 		if(scan.hasNextInt())
 		{
 		
@@ -401,6 +407,10 @@ public class Menu {
 			{
 		
 				return "Employee";
+			}
+			else if(input==0)
+			{
+				return "Exit";
 			}
 			else 
 			{

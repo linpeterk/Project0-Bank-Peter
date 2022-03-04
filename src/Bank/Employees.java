@@ -30,8 +30,14 @@ public class Employees implements Person, java.io.Serializable{
 			System.out.println("No Customers");
 		}
 		
+		System.out.println("+------------------+");
+		System.out.println("|List of Customers |");
+		System.out.println("+------------------+");
+		
 		for(Map.Entry m: Database.currentCustomers.entrySet())
 			{
+			
+			
 			((Customers) m.getValue()).printCustomer();
 			/*
 				String userName, password;
@@ -45,6 +51,10 @@ public class Employees implements Person, java.io.Serializable{
 				System.out.println("Username= " + userName + " Password= "+ password + " Account Type= " +accountType + " balance= " + balance);
 				*/
 			}
+		
+		System.out.println("+------------------+");
+		System.out.println("|List of Customers |");
+		System.out.println("+------------------+");
 	
 	}
 	
@@ -54,8 +64,12 @@ public class Employees implements Person, java.io.Serializable{
 		{
 			System.out.println("No applicants");
 		}
+		System.out.println("+------------------+");
+		System.out.println("|List of Applicants|");
+		System.out.println("+------------------+");
 		for(Map.Entry m: Database.appCustomers.entrySet())
 			{
+				
 			/*
 				String userName, password;
 				int accountType;
@@ -68,6 +82,10 @@ public class Employees implements Person, java.io.Serializable{
 				*/
 			((Customers) m.getValue()).printCustomer();
 			}
+		
+		System.out.println("+------------------+");
+		System.out.println("|List of Applicants|");
+		System.out.println("+------------------+");
 	
 	}
 	
