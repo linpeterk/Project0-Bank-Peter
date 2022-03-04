@@ -179,13 +179,13 @@ public class Menu {
 	public void cancelAccountMenu()
 	{
 		Customers c = null;
-		System.out.println("Enter Applicant's Name");
+		System.out.println("Enter Customer's Name");
 		if(scan.hasNext())
 		{
 			name = scan.nextLine();
 			if(!Database.customerVerify(name))
 			{
-				System.out.println("No Applicant Found");
+				System.out.println("No Customer Found");
 				return;
 			}
 			c=Database.findCustomers(name);
