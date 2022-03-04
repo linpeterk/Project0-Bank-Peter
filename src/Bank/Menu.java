@@ -350,7 +350,9 @@ public class Menu {
 	//Start of screen, selecting type of user
 	public int welcomeScreen()
 	{
-		System.out.println("*****Welcome to Bank of Peter*****");
+		System.out.println("	******************************************");
+		System.out.println("    	*	 Welcome to Bank of Peter        *");
+		System.out.println("	******************************************");
 		String choice = choices();
 		
 		switch(choice)
