@@ -147,7 +147,7 @@ public class Menu {
 		System.out.println("2. Search Account");
 		System.out.println("3. Approve/Deny Applications");
 		System.out.println("0. EXIT");
-		System.out.println("*********** EMPLOYEE MENU *************");
+		System.out.println("***************************************");
 		
 		if(scan.hasNextInt())
 		{
@@ -225,7 +225,7 @@ public class Menu {
 		System.out.println("7. View ALL Employees");
 		System.out.println("9. Add Employee");
 		System.out.println("0. EXIT");
-		System.out.println("************ ADMIN MENU ************");
+		System.out.println("************************************");
 		
 		if(scan.hasNextInt())
 		{
@@ -300,7 +300,7 @@ public class Menu {
 		System.out.println("4. Transfer");
 		System.out.println("5. View History");
 		System.out.println("0. EXIT");
-		System.out.println("*********** CUSTOMER MENU ***********");
+		System.out.println("*************************************");
 		
 		if(scan.hasNextInt())
 		{

@@ -53,7 +53,6 @@ public class Employees implements Person, java.io.Serializable{
 			}
 		
 		System.out.println("+------------------+");
-		System.out.println("|List of Customers |");
 		System.out.println("+------------------+");
 	
 	}
@@ -84,7 +83,6 @@ public class Employees implements Person, java.io.Serializable{
 			}
 		
 		System.out.println("+------------------+");
-		System.out.println("|List of Applicants|");
 		System.out.println("+------------------+");
 	
 	}
