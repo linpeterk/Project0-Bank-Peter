@@ -33,7 +33,7 @@ public class Customers implements Person, java.io.Serializable{
 		for(String a:tranHistory)
 		{
 			String type = a.substring(0, 1); //type of transaction
-			String rest = a.substring(1, a.length()-2); //Rest of stuff
+			String rest = a.substring(1, a.length()); //Rest of stuff
 			if(type.equals("1")) //deposit
 			{
 				System.out.println("Deposit: "+ rest);
