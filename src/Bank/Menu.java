@@ -21,7 +21,7 @@ public class Menu {
 	public Menu(){
 		data = new Database();
 		scan = new Scanner(System.in);
-		veri = new LoginVerification();
+		veri = new LoginVerification(scan);
 		menuC = new MenuCustomers();
 	}
 	
@@ -364,7 +364,7 @@ public class Menu {
 							startApplication(); welcomeScreen();return 1; 
 		
 		case "ECustomer": //System.out.println("It's an existing customer"); 
-							customerOptions(veri.customerloginVer());; return 2;  
+							customerOptions(veri.customerloginVer()); return 2;  
 							/*(veri.customerLoginVer is a verification access to make sure credential match. 
 							 		ONLY RETURNS OBJECT CUSTOMER IF VERIFICATION IS SUCCESSFUL;		*/
 		case "Employee":  //System.out.println("It's an employee"); 

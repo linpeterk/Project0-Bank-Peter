@@ -10,7 +10,6 @@ public class Database implements java.io.Serializable{
 	public static HashMap<String, Employees> employees = new HashMap<String, Employees>(); //Customers waiting for approval
 	
 
-	
 	//appCustomer parameter Customer objects
 	public void application(String userName, String password, int accountType, double balance)
 	{

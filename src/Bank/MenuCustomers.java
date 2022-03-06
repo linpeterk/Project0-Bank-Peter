@@ -13,7 +13,7 @@ public class MenuCustomers {
 	public int pickAccountType() {
 
 		do{
-		System.out.println("Please select enter Account Type. 1 for Checking, 2 for Savings, 3 for Joint");
+		System.out.println("Please select enter Account Type");
 		System.out.println("1. Checking");
 		System.out.println("2. Savings");
 		System.out.println("3. Joint");
@@ -83,9 +83,9 @@ public class MenuCustomers {
 	{
 		double depos = 0;
 		System.out.println("Enter deposit amount");
-		if(scan.hasNextInt())
+		if(scan.hasNextDouble())
 		{
-			depos = scan.nextInt();
+			depos = scan.nextDouble();
 			scan.nextLine(); //clear buffer
 			if(depos<0) {
 				System.out.println("Cannot deposit: Negative number");
@@ -121,9 +121,9 @@ public class MenuCustomers {
 		
 		
 		System.out.println("Enter transfer amount");
-		if(scan.hasNextInt())
+		if(scan.hasNextDouble())
 		{
-			transfer = scan.nextInt();
+			transfer = scan.nextDouble();
 			scan.nextLine(); //clear buffer
 			if(transfer<0) {
 				System.out.println("Cannot transfer: Negative number");

@@ -6,9 +6,12 @@ public class LoginVerification {
 	
 		String name;
 		String password;
-		Scanner scan = new Scanner(System.in);
+		Scanner scan;
 		
-		
+		public LoginVerification(Scanner scan) {
+			this.scan = scan;
+		}
+
 	public  String enterUserName() {
 		
 		System.out.println("Please Enter a User Name");
