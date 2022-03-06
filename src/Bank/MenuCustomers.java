@@ -42,7 +42,7 @@ public class MenuCustomers {
 	}
 	
 	public double depositBalance() {
-
+		balance = 0;
 		do{
 		System.out.println("Deposit amount?");		
 		if(scan.hasNextDouble())
@@ -50,8 +50,6 @@ public class MenuCustomers {
 		
 			balance = scan.nextDouble();
 			scan.nextLine(); //clear buffer
-			break;
-
 		}
 		else {
 			System.out.println("Not a number, please try again");
@@ -59,8 +57,8 @@ public class MenuCustomers {
 			scan.nextLine();		
 		}
 		 //exception handling later
-		
-		}while(true);
+		if(balance<0 )System.out.println("Deposit cannot be negative");
+		}while(balance < 0);
 		return balance;
 	}
 	
